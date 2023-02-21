@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+  <dict>
+      <key>items</key>
+      <array>
+        <dict>
+           <key>assets</key>
+           <array>
+             <dict>
+               <key>kind</key>
+               <string>software-package</string>
+               <key>url</key>
+	 <string><![CDATA[https://apt.lazybot.vip/yy/unc0ver_6.0.2.ipa]]></string>
+             </dict>
+             <dict>
+               <key>kind</key>
+               <string>display-image</string>
+               <key>needs-shine</key>
+               <integer>0</integer>
+               <key>url</key>
+               <string><![CDATA[https://apt.lazybot.vip/yy/logo.png]]></string>
+             </dict>
+             <dict>
+               <key>kind</key>
+               <string>full-size-image</string>
+               <key>needs-shine</key>
+               <true/>
+               <key>url</key>
+               <string><![CDATA[https://apt.lazybot.vip/yy/logo.png]]></string>
+             </dict>
+           </array>
+           <key>metadata</key>
+           <dict>
+             <key>bundle-identifier</key>
+             <string>com.unc0ver.3.0</string>
+             <key>bundle-version</key>
+             <string><![CDATA[1.0.0]]></string>
+             <key>kind</key>
+             <string>software</string>
+             <key>title</key>
+             <string><![CDATA[unc0ver 6.0.2 - 懒人搬动工]]></string>
+           </dict>
+        </dict>
+      </array>
+  </dict>
+</plist>
