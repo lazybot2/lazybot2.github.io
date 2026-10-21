@@ -25,6 +25,7 @@ jobs:
   cleanup:
       runs-on: ubuntu-latest
       permissions: write-all
+      contents: read
       steps:
         - name: Delete deployment
           uses: strumwolf/delete-deployment-environment@v2.3.0
@@ -32,6 +33,13 @@ jobs:
             token: ${{ secrets.GITHUB_TOKEN }}
             environment: github-pages
             onlyRemoveDeployments: true
+        - name: Delete workflow runs for current repo
+          uses: Mattraks/delete-workflow-runs@v2
+          with:
+            token: ${{ secrets.WORK_TOKEN }}
+            repository: ${{ github.repository }}
+            retain_days: 7
+            keep_minimum_runs: 6
   # Single deploy job since we're just deploying
   deploy:
     environment:
