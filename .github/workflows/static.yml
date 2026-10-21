@@ -32,13 +32,7 @@ jobs:
             token: ${{ secrets.GITHUB_TOKEN }}
             environment: github-pages
             onlyRemoveDeployments: true
-        - name: Delete workflow runs for current repo
-          uses: Mattraks/delete-workflow-runs@v2
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            repository: ${{ github.repository }}
-            retain_days: 7
-            keep_minimum_runs: 6
+        
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -58,3 +52,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+      - name: Delete workflow runs for current repo
+          uses: Mattraks/delete-workflow-runs@v2
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            repository: ${{ github.repository }}
+            retain_days: 1
+            keep_minimum_runs: 1
