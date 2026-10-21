@@ -25,7 +25,6 @@ jobs:
   cleanup:
       runs-on: ubuntu-latest
       permissions: write-all
-      contents: read
       steps:
         - name: Delete deployment
           uses: strumwolf/delete-deployment-environment@v2.3.0
