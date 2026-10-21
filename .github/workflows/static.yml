@@ -41,6 +41,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+cleanup:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
       - name: Delete deployment
         uses: strumwolf/delete-deployment-environment@v2.3.0
         with:
