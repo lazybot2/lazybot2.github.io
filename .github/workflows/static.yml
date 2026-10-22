@@ -27,13 +27,13 @@ jobs:
       permissions: write-all
       steps:
         - name: Delete deployment
-          uses: strumwolf/delete-deployment-environment@v2.3.0
+          uses: strumwolf/delete-deployment-environment@v4
           with:
             token: ${{ secrets.GITHUB_TOKEN }}
             environment: github-pages
             onlyRemoveDeployments: true
         - name: Delete workflow runs for current repo
-          uses: Mattraks/delete-workflow-runs@v2
+          uses: Mattraks/delete-workflow-runs@v4
           with:
             token: ${{ secrets.GITHUB_TOKEN }}
             repository: ${{ github.repository }}
@@ -51,7 +51,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           # Upload entire repository
           path: '.'
